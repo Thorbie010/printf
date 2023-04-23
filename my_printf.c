@@ -1,50 +1,52 @@
 #include "main.h"
 #include <stdlib.h>
+#include <stdarg.h>
+#include <stdio.h>
+#include <stdio.h>
 
 /**
- *
- *
- *
+ * my_printf - a function that prints char, string, integer and decimal formats
+ * @format: user input format string, may or may not contain format identifiers
+ * Return: void
  */
 
 int my_printf(const char *format, ...)
 {
-	int r_val = 0;
-
+	int r_val;
+	int i;
 	va_list args;
+	int (*p)(va_list);
 
+	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
+		return (-1);
+
+	r_val = 0;
 	va_start(args, format);
-
-	while (*format != '\0')
+	i = 0;
+	while (format[i] != '\0')
 	{
-		if (*format == '%')
+		if (format[i] != '%')
 		{
-			format++;
-			switch (*format)
+			_putchar(format[i]);
+			r_val += 1;
+		}
+		else
+		{
+			p = get_func(format[i + 1]);
+			if (p == NULL)
 			{
-				case 'c':
-					r_val += _putchr(va_arg(args,int));
-					break;
-				
-				case 's':
-				{
-					char *s = va_arg(args, char *);
-					while (*s != '\0')
-					{
-						r_val += _putchr(*s);
-						s++;
-					}
-					break;
-				}
-				case '%':
-					r_val += _putchr('%');
-					break;
+				_putchar('%');
+				_putchar(format[i]);
+				r_val += 2;
+			}
+			else
+			{
+				r_val += p(args);
+				i += 1;
 			}
 		}
-		r_val += _putchr(*format);
-
-		format++;
-		}
+		i += 1;
+	}
 	va_end(args);
 	return (r_val);
 }
