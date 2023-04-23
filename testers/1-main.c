@@ -6,9 +6,9 @@ int main()
     int my_int = 123;
     char my_string[] = "Hello, world!";
 
-    my_printf("Character: %c\n", my_char);
-    my_printf("Integer: %d\n", my_int);
-    my_printf("String: %s\n", my_string);
+    _printf("Character: %c\n", my_char);
+    _printf("Integer: %d\n", my_int);
+    _printf("String: %s\n", my_string);
 
     return (0);
 }
