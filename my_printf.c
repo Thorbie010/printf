@@ -5,12 +5,12 @@
 #include <stdio.h>
 
 /**
- * my_printf - a function that prints char, string, integer and decimal formats
+ * _printf - a function that prints char, string, integer and decimal formats
  * @format: user input format string, may or may not contain format identifiers
  * Return: void
  */
 
-int my_printf(const char *format, ...)
+int _printf(const char *format, ...)
 {
 	int r_val;
 	int i;
