@@ -11,5 +11,6 @@ int print_int(va_list args);
 int print_char(va_list args);
 int print_string(va_list args);
 int (*get_func(char s))(va_list);
+int print_percent(__attribute__((unused))va_list args);
 
 #endif /* MAIN_H */
