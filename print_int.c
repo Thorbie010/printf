@@ -10,7 +10,7 @@
 
 int print_int(va_list args)
 {
-	int n = va_arg(args, int);
+	long int n = va_arg(args, long int);
 	int len = 0;
 
 	if (n < 0)
