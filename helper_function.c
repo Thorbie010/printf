@@ -2,7 +2,7 @@
 #include <stddef.h>
 #include <stdarg.h>
 #include <stdlib.h>
-#include <inistd.h>
+#include <unistd.h>
 #include <stdio.h>
 
 /**
