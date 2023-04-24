@@ -21,7 +21,11 @@ int print_int(va_list args)
 	}
 	if (n > 9)
 	{
+		va_list args_copy;
+		va_copy(args_copy, args);
 		len += print_int(args);
+		va_end(args_copy);
+
 	}
 	_putchar(n % 10 + '0');
 	len++;

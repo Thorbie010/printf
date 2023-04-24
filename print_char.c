@@ -2,6 +2,7 @@
 #include <stdarg.h>
 #include <stdlib.h>
 #include <stddef.h>
+#include <stdio.h>
 
 /**
  * print_char - function pointer for my_printf %c
@@ -14,6 +15,9 @@ int print_char(va_list args)
 {
 	int c = va_arg(args, int);
 
-	_putchar(c);
+	if (_putchar(c) == EOF)
+	{
+		return (-1);
+	}
 	return (1);
 }

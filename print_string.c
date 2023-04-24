@@ -2,6 +2,7 @@
 #include <stdarg.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdio.h>
 
 /**
  * print_string - prints a string
@@ -13,13 +14,16 @@ int print_string(va_list args)
 	char *str = va_arg(args, char *);
 	int count = 0;
 
-	if (str == NULL)
+	if (str == NULL || str == (char *)0)
 	{
-		return (-1);
+		str = "(null)";
 	}
 	while (*str != '\0')
 	{
-		_putchar(*str);
+		if (_putchar(*str) == EOF)
+		{
+			return (-1);
+		}
 		str++;
 		count++;
 	}
