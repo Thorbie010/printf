@@ -23,6 +23,18 @@ int (*get_func(char c))(va_list)
 			return (&print_int);
 		case '%':
 			return (&print_percent);
+		case 'x':
+			return (&print_unsigned_hex);
+		case 'o':
+			return (&print_unsigned_octal);
+		case 'p':
+			return (&print_pointer);
+		case 'X':
+			return (&print_hex_upper);
+		case 'u':
+			return (&print_unsigned_decimal);
+		case 'b':
+			return (&print_unsigned_binary);
 		default:
 			return (NULL);
 	}

@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <stdio.h>
+#include <math.h>
 
 /**
  * put_count - calls _putchar and increments counter
@@ -53,7 +54,6 @@ int print_char(va_list args)
  * Return: value for len
  *
  */
-
 int print_int(va_list args)
 {
 	int64_t n = va_arg(args, int64_t);
@@ -62,14 +62,13 @@ int print_int(va_list args)
 	int i = 0;
 
 	int64_t temp = n;
-	
+
 	while (temp != 0)
 	{
 		len++;
 		temp /= 10;
 	}
-
-	digit = (int*)malloc(len * sizeof(int));
+	digit = (int *)malloc(len * sizeof(int));
 
 	if (n == 0)
 	{
@@ -79,7 +78,7 @@ int print_int(va_list args)
 	else if (n < 0)
 	{
 		_putchar('-');
-		n = -n;
+		n = n * (-1);
 		len++;
 	}
 	while (n > 0)
@@ -87,20 +86,17 @@ int print_int(va_list args)
 		digit[i++] = n % 10;
 		n /= 10;
 	}
-
 	for (j = i - 1; j >= 0; j--)
 	{
 		_putchar(digit[j] + '0');
 		len++;
 	}
 	free(digit);
-
 	return (len);
 }
 
-
 /**
- * print_string - prints a string
+ * * print_string - prints a string
  * @args: user input
  * Return: number of characters printed
  */
