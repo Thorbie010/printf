@@ -36,18 +36,15 @@ int _print_STRING(va_list args);
 int _print_pointer(va_list args);
 int _print_reverse(va_list args);
 int _print_rot13(va_list args);
-<<<<<<< HEAD
 int count_digit(int i);
 void _print_number(int n);
 char *convert(unsigned int num, int base, int lowercase);
 int (*get_print(char s))(va_list, flags_t *);
-=======
 int (*get_func(char c))(va_list)
 int count_digit(int i);
 void _print_number(int n);
 char *convert(unsigned int num, int base, int lowercase);
 int (*get_print(char s))(va_list);
->>>>>>> b2e641458d2414df15a780841f73da5f4e5d642f
 int get_flag(char s);
 
 #endif
