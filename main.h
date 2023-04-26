@@ -24,4 +24,5 @@ int rot13(va_list list);
 int print_reversed(va_list arg);
 char *rev_string(char *s);
 char *_memcpy(char *dest, char *src, unsigned int n);
+void write_base(char *str);
 #endif /* MAIN_H */
