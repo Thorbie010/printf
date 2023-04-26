@@ -56,44 +56,10 @@ int print_char(va_list args)
  */
 int print_int(va_list args)
 {
-	int64_t n = va_arg(args, int64_t);
-	int len = 0;
-	int *digit, j;
-	int i = 0;
+	int num_length;
 
-	int64_t temp = n;
-
-	while (temp != 0)
-	{
-		len++;
-		temp /= 10;
-	}
-	digit = (int *)malloc(len * sizeof(int));
-	if (digit == NULL)
-		return (-1);
-	if (n == 0)
-	{
-		_putchar('0');
-		len++;
-	}
-	else if (n < 0)
-	{
-		_putchar('-');
-		n = n * (-1);
-		len++;
-	}
-	while (n > 0)
-	{
-		digit[i++] = n % 10;
-		n /= 10;
-	}
-	for (j = i - 1; j >= 0; j--)
-	{
-		_putchar(digit[j] + '0');
-		len++;
-	}
-	free(digit);
-	return (len);
+	num_length = print_number(args);
+	return (num_length);
 }
 
 /**
