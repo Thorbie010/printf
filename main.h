@@ -27,5 +27,6 @@ char *_memcpy(char *dest, char *src, unsigned int n);
 void write_base(char *str);
 unsigned int base_len(unsigned int num, int base);
 int print_number(va_list args);
+void print_S(va_list args, int *count);
 int print_unsgined_number(unsigned int n);
 #endif /* MAIN_H */
