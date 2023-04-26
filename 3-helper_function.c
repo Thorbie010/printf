@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_reversed - Calls a function to reverse and print a string
+ * print_reversed - Calls a function to reverse and prints a string.
  * @arg: Argument passed to the function
  * Return: The amount of characters printed
  */
@@ -24,13 +24,13 @@ int print_reversed(va_list arg)
 }
 
 /**
- * rot13 - Converts string to rot13
- * @list: string to convert
+ * rot13 - Function that converts string to rot13
+ * @list: string to be converted.
  * Return: converted string
  */
 int rot13(va_list list)
 {
-	int i;
+	int y;
 	int x;
 	char *str;
 	char s[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
@@ -39,18 +39,18 @@ int rot13(va_list list)
 	str = va_arg(list, char *);
 	if (str == NULL)
 		return (-1);
-	for (i = 0; str[i] != '\0'; i++)
+	for (y = 0; str[y] != '\0'; y++)
 	{
 		for (x = 0; x <= 52; x++)
 		{
-			if (str[i] == s[x])
+			if (str[y] == s[x])
 			{
 				_putchar(u[x]);
 				break;
 			}
 		}
 		if (x == 53)
-			_putchar(str[i]);
+			_putchar(str[y]);
 	}
-	return (i);
+	return (y);
 }
