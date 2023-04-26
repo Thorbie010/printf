@@ -114,5 +114,5 @@ unsigned int base_len(unsigned int num, int base)
 	{
 		num = num / base;
 	}
-	return (i);
+	return (x);
 }
