@@ -4,9 +4,9 @@
 #include <stdlib.h>
 
 /**
- * get_func - pointer to a function that will extract the corralating function
+ * get_func - Pointer to a function that will extract the correlating function
  *  from a struct
- * @c:  string of the format specifier eg. "%c",or "%s"
+ * @c:  string of the format specifier eg. "%c"or "%s"
  * Return: pointer to function or NULL if error
  */
 int (*get_func(char c))(va_list)
