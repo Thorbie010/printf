@@ -69,8 +69,6 @@ int print_int(va_list args)
 		temp /= 10;
 	}
 	digit = (int *)malloc(len * sizeof(int));
-	if (digit == NULL)
-		return (-1);
 
 	if (n == 0)
 	{
