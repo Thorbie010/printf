@@ -4,7 +4,7 @@
  * print_pointer - Function that prints the address.
  * @args: The specifier type.
  * @f: Pointer to the struct.
- * Return: number of char printed
+ * Return: number of characters printed.
  */
 int print_pointer(va_list args)
 {
