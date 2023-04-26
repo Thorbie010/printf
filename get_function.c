@@ -35,6 +35,10 @@ int (*get_func(char c))(va_list)
 			return (&print_unsigned_decimal);
 		case 'b':
 			return (&print_unsigned_binary);
+		case 'r':
+			return (&print_reversed);
+		case 'R':
+			return (&rot13);
 		default:
 			return (NULL);
 	}

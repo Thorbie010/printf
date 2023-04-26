@@ -103,22 +103,14 @@ int print_int(va_list args)
  */
 int print_string(va_list args)
 {
-	char *str = va_arg(args, char *);
-	int count = 0;
+	int i;
+	char *str;
 
+	str = va_arg(args, char *);
 	if (str == NULL)
-	{
 		str = "(null)";
-	}
-	while (*str != '\0')
-	{
-		if (_putchar(*str) == EOF)
-		{
-			return (-1);
-		}
-		str++;
-		count++;
-	}
-	return (count);
+	for (i = 0; str[i] != '\0'; i++)
+		_putchar(str[i]);
+	return (i);
 }
 

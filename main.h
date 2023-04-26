@@ -20,5 +20,8 @@ int print_pointer(va_list args);
 int print_unsigned_decimal(va_list args);
 int print_hex_upper(va_list args);
 int print_unsigned_binary(va_list args);
-
+int rot13(va_list list);
+int print_reversed(va_list arg);
+char *rev_string(char *s);
+char *_memcpy(char *dest, char *src, unsigned int n);
 #endif /* MAIN_H */
