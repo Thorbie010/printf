@@ -49,10 +49,10 @@ int print_unsigned_binary(va_list args)
  */
 void write_base(char *str)
 {
-	int i;
+	int x;
 
-	for (i = 0; str[i] != '\0'; i++)
-		_putchar(str[i]);
+	for (x = 0; str[x] != '\0'; x++)
+		_putchar(str[x]);
 }
 
 /**
@@ -93,11 +93,11 @@ char *rev_string(char *s)
  */
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
-	unsigned int i;
+	unsigned int x;
 
-	for (i = 0; i < n; i++)
-		dest[i] = src[i];
-	dest[i] = '\0';
+	for (x = 0; x < n; x++)
+		dest[x] = src[x];
+	dest[x] = '\0';
 	return (dest);
 }
 /**
@@ -108,9 +108,9 @@ char *_memcpy(char *dest, char *src, unsigned int n)
  */
 unsigned int base_len(unsigned int num, int base)
 {
-	unsigned int i;
+	unsigned int x;
 
-	for (i = 0; num > 0; i++)
+	for (x = 0; num > 0; x++)
 	{
 		num = num / base;
 	}
