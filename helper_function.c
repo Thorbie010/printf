@@ -69,7 +69,8 @@ int print_int(va_list args)
 		temp /= 10;
 	}
 	digit = (int *)malloc(len * sizeof(int));
-
+	if (digit == NULL)
+		return (-1);
 	if (n == 0)
 	{
 		_putchar('0');
@@ -104,33 +105,21 @@ int print_string(va_list args)
 {
 	char *str = va_arg(args, char *);
 	int count = 0;
-	char *temp_str;
 
 	if (str == NULL || str == (char *)0)
 	{
 		str = "(null)";
 	}
-	else 
-	{
-		temp_str = (char *)malloc(strlen(str) + 1);
-		if (temp_str == NULL)
-			return (-1);
-
-		strcpy(temp_str, str);
-		str = temp_str;
-	}
-
 	while (*str != '\0')
 	{
 		if (_putchar(*str) == EOF)
 		{
-			free(str);
 			return (-1);
 		}
 		str++;
 		count++;
 	}
-	free(str);
+
 	return (count);
 }
 
