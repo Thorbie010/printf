@@ -8,7 +8,7 @@
  */
 int print_pointer(va_list args)
 {
-	char *str;
+	char *str, *f;
 	unsigned long int p = va_arg(args, unsigned long int);
 
 	register int count = 0;
