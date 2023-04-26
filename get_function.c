@@ -39,8 +39,8 @@ int (*get_func(char c))(va_list)
 			return (&print_reversed);
 		case 'R':
 			return (&rot13);
-		case 'S':
-			return (&print_S);
+		/*case 'S':
+			return (&print_S);*/
 		default:
 			return (NULL);
 	}

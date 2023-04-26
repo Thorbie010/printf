@@ -71,7 +71,7 @@ int print_unsgined_number(unsigned int n)
  * @count: string count
  * Return: The amount of numbers printed
  */
-void print_S(va_list args, int *count)
+/*void print_S(va_list args, int *count)
 {
 	char *str = va_arg(args, char *);
 	int i;
@@ -94,5 +94,5 @@ void print_S(va_list args, int *count)
 		}
 		(*count)++;
 	}
-}
+}*/
 
