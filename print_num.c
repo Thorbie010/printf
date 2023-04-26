@@ -66,7 +66,7 @@ int print_unsgined_number(unsigned int n)
 }
 
 /**
- * print_S - Prints a string
+ * print_S - Function that prints a string
  * @args: argument to be printed
  * @count: string count
  * Return: The amount of numbers printed
