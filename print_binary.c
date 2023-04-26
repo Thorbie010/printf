@@ -11,22 +11,49 @@
 
 int print_unsigned_binary(va_list args)
 {
-	unsigned int num = va_arg(args, unsigned int);
-	char buffer[33];
-	int i = 0, j;
+	unsigned int num;
+	int i, len;
+	char *str;
+	char *rev_str;
 
-	do {
-		buffer[i++] = num % 2 + '0';
-		num /= 2;
-	} while (num > 0 && i < 32);
+	num = va_arg(args, unsigned int);
+	if (num == 0)
+		return (_putchar('0'));
+	if (num < 1)
+		return (-1);
+	len = base_len(num, 2);
+	str = malloc(sizeof(char) * len + 1);
+	if (str == NULL)
+		return (-1);
 
-	for (j = i - 1; j >= 0; j--)
+	for (i = 0; num > 0; i++)
 	{
-		putchar(buffer[j]);
+		if (num % 2 == 0)
+			str[i] = '0';
+		else
+			str[i] = '1';
+		num = num / 2;
 	}
-	return (i);
+	str[i] = '\0';
+	rev_str = rev_string(str);
+	if (rev_str == NULL)
+		return (-1);
+	write_base(rev_str);
+	free(str);
+	free(rev_str);
+	return (len);
 }
+/**
+ * write_base - sends characters to be written on standard output
+ * @str: String to parse
+ */
+void write_base(char *str)
+{
+	int i;
 
+	for (i = 0; str[i] != '\0'; i++)
+		_write_char(str[i]);
+}
 
 /**
  * rev_string - reverses a string in place
