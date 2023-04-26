@@ -25,4 +25,5 @@ int print_reversed(va_list arg);
 char *rev_string(char *s);
 char *_memcpy(char *dest, char *src, unsigned int n);
 void write_base(char *str);
+unsigned int base_len(unsigned int num, int base);
 #endif /* MAIN_H */
