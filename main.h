@@ -1,6 +1,8 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+#define BUFF_SIZE 1024
+#define UNUSED(x) (void)(x)
 
 #include <stdarg.h>
 #include <stdlib.h>
