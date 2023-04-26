@@ -7,7 +7,7 @@
 #include <string.h>
 
 /**
- * put_count - calls _putchar and increments counter
+ * put_count - Calls _putchar and increments the counter
  * @c: a character
  *
  * Return: 1
@@ -19,7 +19,7 @@ int put_count(char c)
 }
 
 /**
- * print_percent - prints the percent sign
+ * print_percent - Function that prints the percent sign
  * @args: user input
  * Return: number of percent signs
  */
@@ -49,7 +49,7 @@ int print_char(va_list args)
 }
 
 /**
- * print_int - function pointer for printing integer
+ * print_int - function pointer that prints integer
  * @args: variable argument integer input
  * Return: value for len
  *
@@ -63,7 +63,7 @@ int print_int(va_list args)
 }
 
 /**
- * * print_string - prints a string
+ * * print_string - Function that prints a string
  * @args: user input
  * Return: number of characters printed
  */
