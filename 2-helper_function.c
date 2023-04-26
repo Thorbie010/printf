@@ -172,17 +172,17 @@ int print_unsigned_decimal(va_list args)
 {
 	unsigned int num = va_arg(args, unsigned int);
 	char buffer[10];
-	int i = 0;
-	int j;
+	int x = 0;
+	int y;
 
 	do {
-		buffer[i++] = num % 10 + '0';
+		buffer[x++] = num % 10 + '0';
 		num /= 10;
-	} while (num > 0 && i < 10);
+	} while (num > 0 && x < 10);
 
-	for (j = i - 1; j >= 0; j--)
+	for (y = x - 1; y >= 0; y--)
 	{
-		_putchar(buffer[j]);
+		_putchar(buffer[y]);
 	}
-	return (i);
+	return (x);
 }
