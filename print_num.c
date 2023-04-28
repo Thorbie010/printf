@@ -71,16 +71,16 @@ int print_unsgined_number(unsigned int n)
  * @count: string count
  * Return: The amount of numbers printed
  */
-/*void print_S(va_list args, int *count)
+/*int print_S(va_list args)
 {
 	char *str = va_arg(args, char *);
 	int i;
-	
+
 	if (str == NULL)
 	{
 		str = "(null)";
 	}
-	
+
 	for (i = 0; str[i] != '\0'; i++)
 	{
 		if (str[i] >= 32 && str[i] < 127)
@@ -92,7 +92,7 @@ int print_unsgined_number(unsigned int n)
 			_putchar("\\x");
 			_putchar(str[i], 2);
 		}
-		(*count)++;
 	}
-}*/
+	return (i);*/
+}
 
