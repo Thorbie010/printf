@@ -65,3 +65,35 @@ int print_unsgined_number(unsigned int n)
 	return (len);
 }
 
+/**
+ * print_S - Function that prints a string
+ * @args: argument to be printed
+ * Return: The amount of numbers printed
+ */
+int print_S(va_list args)
+{
+	char *str = va_arg(args, char *);
+	int i;
+
+	if (str == NULL)
+	{
+		str = "(null)";
+	}
+	for (i = 0; str[i] != '\0'; i++)
+	{
+		if (str[i] >= 32 && str[i] < 127)
+		{
+			_putchar(str[i]);
+		}
+		else
+		{
+			unsigned char c = str[i];
+
+			_putchar('\\');
+			_putchar('x');
+			_putchar(c / 16 + (c / 16 > 9 ? 'A' - 10 : '0'));
+			_putchar(c % 16 + (c % 16 > 9 ? 'A' - 10 : '0'));
+		}
+	}
+	return (i);
+}
