@@ -32,6 +32,6 @@ char *convert(unsigned int num, int base, int lowercase);
 int get_flag(char s);
 unsigned int base_len(unsigned int num, int base);
 int print_number(va_list args);
-void print_S(va_list args);
+int print_s(va_list args);
 int print_unsgined_number(unsigned int n);
 #endif /* MAIN_H */

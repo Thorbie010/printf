@@ -40,7 +40,7 @@ int (*get_func(char c))(va_list)
 		case 'R':
 			return (&rot13);
 		case 'S':
-			return (&print_S);
+			return (&print_s);
 		default:
 			return (NULL);
 	}

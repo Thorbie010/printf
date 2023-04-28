@@ -66,11 +66,11 @@ int print_unsgined_number(unsigned int n)
 }
 
 /**
- * print_S - Function that prints a string
+ * print_s - Function that prints a string
  * @args: argument to be printed
  * Return: The amount of numbers printed
  */
-int print_S(va_list args)
+int print_s(va_list args)
 {
 	char *str = va_arg(args, char *);
 	int i;
