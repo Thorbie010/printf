@@ -65,34 +65,3 @@ int print_unsgined_number(unsigned int n)
 	return (len);
 }
 
-/**
- * print_S - Function that prints a string
- * @args: argument to be printed
- * @count: string count
- * Return: The amount of numbers printed
- */
-/*int print_S(va_list args)
-{
-	char *str = va_arg(args, char *);
-	int i;
-
-	if (str == NULL)
-	{
-		str = "(null)";
-	}
-
-	for (i = 0; str[i] != '\0'; i++)
-	{
-		if (str[i] >= 32 && str[i] < 127)
-		{
-			_putchar(str[i]);
-		}
-		else
-		{
-			_putchar("\\x");
-			_putchar(str[i], 2);
-		}
-	}
-	return (i);
-}*/
-
