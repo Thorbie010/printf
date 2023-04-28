@@ -93,6 +93,6 @@ int print_unsgined_number(unsigned int n)
 			_putchar(str[i], 2);
 		}
 	}
-	return (i);*/
-}
+	return (i);
+}*/
 
