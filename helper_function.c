@@ -41,10 +41,7 @@ int print_char(va_list args)
 {
 	int c = va_arg(args, int);
 
-	if (_putchar(c) == EOF)
-	{
-		return (-1);
-	}
+	_putchar(c);
 	return (1);
 }
 
